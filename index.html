@@ -10,204 +10,126 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
 
-body{
-background:#0e1a16;
-color:#eaeaea;
-line-height:1.6;
-}
+body{background:#0e1a16;color:#eaeaea;}
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
-padding:20px 80px;
-border-bottom:1px solid rgba(255,255,255,0.1);
+padding:20px 60px;
+background:#0e1a16;
 }
+nav a{color:#ccc;text-decoration:none;margin-left:20px;}
 nav h2{color:#3cff9c;}
 
 /* HERO */
 .hero{
-padding:120px 80px;
-max-width:900px;
+height:90vh;
+display:flex;
+align-items:center;
+padding:0 60px;
+background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
 }
-.hero h1{
-font-size:48px;
-font-weight:600;
+.hero div{
+background:rgba(0,0,0,0.6);
+padding:40px;
+border-radius:15px;
 }
-.hero p{
-margin-top:15px;
-color:#aaa;
+.hero h1{font-size:50px;}
+.hero p{margin-top:10px;color:#ccc;}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#3cff9c;
+color:black;
+border-radius:8px;
+text-decoration:none;
 }
 
 /* SECTION */
-.section{
-padding:80px;
-}
+.section{padding:80px 60px;}
 
-/* SERVICES GRID */
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
+gap:20px;
 }
 .card{
-padding:25px;
-border-radius:15px;
 background:#16251f;
-border:1px solid rgba(255,255,255,0.05);
-transition:0.3s;
-}
-.card:hover{
-transform:translateY(-5px);
-border-color:#3cff9c;
+padding:20px;
+border-radius:10px;
 }
 
-/* AI BOX */
-.ai{
-max-width:500px;
-margin:auto;
+/* FOUNDER */
+.founder{
+background:#16251f;
 padding:30px;
-border-radius:15px;
-background:#16251f;
-}
-.ai input,.ai select{
-width:100%;
-padding:12px;
-margin:10px 0;
-border:none;
 border-radius:10px;
-background:#0e1a16;
-color:white;
-}
-.btn{
-width:100%;
-padding:12px;
-border:none;
-border-radius:10px;
-background:#3cff9c;
-color:black;
-cursor:pointer;
-}
-
-/* RESULT */
-.result{
-margin-top:15px;
-padding:15px;
-border-radius:10px;
-background:#0e1a16;
-}
-
-/* LOGOS */
-.logos{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:40px;
-opacity:0.7;
-}
-.logos img{
-width:100px;
-filter:grayscale(1);
-transition:0.3s;
-}
-.logos img:hover{
-filter:none;
-transform:scale(1.1);
+max-width:700px;
 }
 
 /* FOOTER */
-footer{
-text-align:center;
-padding:40px;
-color:#888;
-}
+footer{text-align:center;padding:40px;color:#888;}
 </style>
 </head>
 
 <body>
 
 <nav>
-<h2>Green Environment 🌿</h2>
+<h2>🌿 Green Environment</h2>
+<div>
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+</div>
 </nav>
 
 <section class="hero">
-<h1>Landscaping & Horticulture Experts</h1>
-<p>25+ years of delivering premium green solutions across Delhi NCR.</p>
+<div>
+<h1>The Horticulture People 🌱</h1>
+<p>25+ Years of Excellence | Delhi NCR</p>
+
+<a href="services.html" class="btn">Explore Our Work</a>
+</div>
 </section>
 
 <section class="section">
-<h2>Our Services</h2><br>
+<h2>What We Do</h2><br>
 
 <div class="grid">
 <div class="card">Landscaping</div>
-<div class="card">Commercial Design</div>
+<div class="card">Commercial Garden Design</div>
 <div class="card">FRP Planters</div>
-<div class="card">Nursery Supply</div>
-<div class="card">Maintenance</div>
+<div class="card">Nursery Supply (3 Acres)</div>
 </div>
 </section>
 
 <section class="section">
-<h2>Smart Plant Recommendation</h2><br>
+<h2>Founder’s Message</h2><br>
 
-<div class="ai">
-<input id="area" placeholder="Area (sq ft)">
-<select id="sun">
-<option>Low Sunlight</option>
-<option>Medium Sunlight</option>
-<option>High Sunlight</option>
-</select>
+<div class="founder">
+<p>
+“At Green Environment, we believe greenery is not decoration — it is life.
+For over 25 years, we have been transforming spaces into sustainable ecosystems.
+Our mission is simple: deliver quality, on time, every time.”
+</p>
 
-<button class="btn" onclick="predict()">Get Recommendation</button>
-
-<div id="result" class="result"></div>
-</div>
-</section>
-
-<section class="section">
-<h2>Our Clients</h2><br>
-
-<div class="logos">
-<img src="https://logo.clearbit.com/wipro.com">
-<img src="https://logo.clearbit.com/airtel.com">
-<img src="https://logo.clearbit.com/samsung.com">
-<img src="https://logo.clearbit.com/cbre.com">
-<img src="https://logo.clearbit.com/apollotyres.com">
+<p style="margin-top:15px;color:#3cff9c;">– Ravi Vatsa</p>
 </div>
 </section>
 
 <section class="section">
 <h2>Contact</h2><br>
-<p>SB-129, Sector 63 A, Noida</p>
+<p>SB-129, Sector 63 A, Noida - 201301</p>
 <p>green_environment@rediffmail.com</p>
 </section>
 
 <footer>
-© Green Environment | Ravi Vatsa
+© Green Environment | The Horticulture People
 </footer>
-
-<script>
-function predict(){
-let sun=document.getElementById("sun").value;
-let area=document.getElementById("area").value;
-let res=document.getElementById("result");
-
-if(!area){
-res.innerHTML="⚠️ Please enter area";
-return;
-}
-
-if(sun.includes("Low")){
-res.innerHTML="Indoor setup recommended: Snake Plant, ZZ Plant";
-}
-else if(sun.includes("Medium")){
-res.innerHTML="Balanced garden: Tulsi, Aloe Vera, Areca Palm";
-}
-else{
-res.innerHTML="Outdoor garden: Hibiscus, Rose, Bougainvillea";
-}
-}
-</script>
 
 </body>
 </html>
