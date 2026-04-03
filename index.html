@@ -5,75 +5,78 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Green Environment</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
 
-body{background:#0e1a16;color:#eaeaea;}
+body{background:#f8fafc;color:#1e293b;}
 
 /* NAV */
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 60px;
-background:#0e1a16;
+background:white;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
-nav a{color:#ccc;text-decoration:none;margin-left:20px;}
-nav h2{color:#3cff9c;}
+nav h2{color:#16a34a;}
+nav a{
+margin:0 15px;
+text-decoration:none;
+color:#334155;
+}
 
 /* HERO */
 .hero{
 height:90vh;
+background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
 display:flex;
 align-items:center;
-padding:0 60px;
-background:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover;
+padding:60px;
 }
-.hero div{
-background:rgba(0,0,0,0.6);
+.hero-content{
+background:rgba(0,0,0,0.5);
 padding:40px;
-border-radius:15px;
+border-radius:10px;
+color:white;
+max-width:600px;
 }
 .hero h1{font-size:50px;}
-.hero p{margin-top:10px;color:#ccc;}
-
-/* BUTTON */
 .btn{
-display:inline-block;
-margin-top:20px;
 padding:12px 25px;
-background:#3cff9c;
-color:black;
-border-radius:8px;
+border:none;
+border-radius:6px;
+background:#16a34a;
+color:white;
+cursor:pointer;
 text-decoration:none;
+display:inline-block;
+margin-top:10px;
 }
 
 /* SECTION */
 .section{padding:80px 60px;}
 
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+/* ABOUT */
+.about{
+display:flex;
+gap:40px;
+align-items:center;
 }
-.card{
-background:#16251f;
-padding:20px;
-border-radius:10px;
-}
-
-/* FOUNDER */
-.founder{
-background:#16251f;
-padding:30px;
-border-radius:10px;
-max-width:700px;
+.about img{
+width:400px;
+border-radius:15px;
 }
 
 /* FOOTER */
-footer{text-align:center;padding:40px;color:#888;}
+footer{
+background:#0f172a;
+color:white;
+padding:40px;
+text-align:center;
+}
 </style>
 </head>
 
@@ -88,47 +91,30 @@ footer{text-align:center;padding:40px;color:#888;}
 </nav>
 
 <section class="hero">
-<div>
+<div class="hero-content">
 <h1>The Horticulture People 🌱</h1>
-<p>25+ Years of Excellence | Delhi NCR</p>
+<p>25+ years of landscaping excellence across Delhi NCR</p>
 
-<a href="services.html" class="btn">Explore Our Work</a>
+<a href="services.html" class="btn">Explore Services</a>
 </div>
 </section>
 
 <section class="section">
-<h2>What We Do</h2><br>
-
-<div class="grid">
-<div class="card">Landscaping</div>
-<div class="card">Commercial Garden Design</div>
-<div class="card">FRP Planters</div>
-<div class="card">Nursery Supply (3 Acres)</div>
-</div>
-</section>
-
-<section class="section">
-<h2>Founder’s Message</h2><br>
-
-<div class="founder">
+<div class="about">
+<div>
+<h2>About Us</h2>
 <p>
-“At Green Environment, we believe greenery is not decoration — it is life.
-For over 25 years, we have been transforming spaces into sustainable ecosystems.
-Our mission is simple: deliver quality, on time, every time.”
+Green Environment has been delivering premium landscaping
+solutions for corporates and residential spaces across Delhi NCR.
 </p>
-
-<p style="margin-top:15px;color:#3cff9c;">– Ravi Vatsa</p>
 </div>
-</section>
 
-<section class="section">
-<h2>Contact</h2><br>
-<p>SB-129, Sector 63 A, Noida - 201301</p>
-<p>green_environment@rediffmail.com</p>
+<img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735">
+</div>
 </section>
 
 <footer>
-© Green Environment | The Horticulture People
+© Green Environment | Ravi Vatsa
 </footer>
 
 </body>
