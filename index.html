@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Environment 🌿</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin:0;
+    font-family:Poppins;
+    background:linear-gradient(135deg,#0f2027,#203a43,#2c7744);
+    color:white;
+}
+
+/* NAV */
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:20px 50px;
+}
+nav h2 {color:#00ff88}
+
+/* HERO */
+.hero {
+    text-align:center;
+    padding:100px 20px;
+}
+.hero h1 {
+    font-size:55px;
+    background:linear-gradient(#00ff88,#00c853);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* SECTION */
+.section {
+    padding:50px;
+    text-align:center;
+}
+
+/* CARD */
+.card {
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    margin:15px;
+    padding:20px;
+    border-radius:20px;
+    display:inline-block;
+    width:250px;
+    transition:0.3s;
+}
+.card:hover {
+    transform:scale(1.05);
+    box-shadow:0 0 20px #00ff88;
+}
+
+/* BUTTON */
+.btn {
+    padding:10px 20px;
+    background:#00ff88;
+    border:none;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+/* FOOTER */
+footer {
+    text-align:center;
+    padding:30px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h2>🌿 Green Environment</h2>
+</nav>
+
+<section class="hero">
+    <h1>25+ Years of Green Excellence 🌱</h1>
+    <p>Serving Delhi-NCR | Founder: Ravi Vatsa</p>
+</section>
+
+<section class="section">
+    <h2>🌿 Our Services</h2>
+    <div class="card">Landscaping</div>
+    <div class="card">Commercial Design</div>
+    <div class="card">FRP Pots</div>
+    <div class="card">Nursery Supply</div>
+    <div class="card">Plantation Projects</div>
+</section>
+
+<section class="section">
+    <h2>🏢 Our Clients</h2>
+    <p>JLL | CBRE | Wipro | Airtel | Samsung | Apollo Tyres & more</p>
+</section>
+
+<section class="section">
+    <h2>🧠 AI Plant Predictor</h2>
+
+    <select id="sun">
+        <option>Low Sunlight</option>
+        <option>Medium Sunlight</option>
+        <option>High Sunlight</option>
+    </select>
+
+    <br><br>
+    <button class="btn" onclick="predict()">Suggest Plants</button>
+
+    <h3 id="result"></h3>
+</section>
+
+<section class="section">
+    <h2>📍 Contact</h2>
+    <p>Head Office: SB-129, Sector 63 A, Noida - 201301</p>
+    <p>Email: green_environment@rediffmail.com</p>
+</section>
+
+<footer>
+    <p>© Green Environment | 25+ Years | Delhi NCR</p>
+</footer>
+
+<script>
+function predict(){
+    let s=document.getElementById("sun").value;
+    let r=document.getElementById("result");
+
+    if(s.includes("Low")) r.innerHTML="Snake Plant, Money Plant";
+    else if(s.includes("Medium")) r.innerHTML="Tulsi, Aloe Vera";
+    else r.innerHTML="Rose, Hibiscus";
+}
+</script>
+
+</body>
+</html>
