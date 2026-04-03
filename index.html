@@ -8,87 +8,103 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-* {margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
-body {
-    background:linear-gradient(135deg,#0f2027,#203a43,#2c7744);
-    color:white;
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c7744);
+color:white;
 }
 
 /* NAV */
-nav {
-    display:flex;
-    justify-content:space-between;
-    padding:20px 50px;
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
 }
-nav h2 {color:#00ff88}
+nav h2{color:#00ff88}
 
 /* HERO */
-.hero {
-    text-align:center;
-    padding:120px 20px;
+.hero{
+text-align:center;
+padding:120px 20px;
 }
-.hero h1 {
-    font-size:60px;
-    background:linear-gradient(#00ff88,#00c853);
-    -webkit-background-clip:text;
-    color:transparent;
+.hero h1{
+font-size:60px;
+background:linear-gradient(#00ff88,#00c853);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+/* SECTION */
+.section{
+padding:60px;
+text-align:center;
 }
 
 /* CARDS */
-.section {padding:60px;text-align:center;}
-.card {
-    display:inline-block;
-    width:260px;
-    margin:15px;
-    padding:25px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(12px);
-    transition:0.4s;
+.card{
+display:inline-block;
+width:260px;
+margin:15px;
+padding:25px;
+border-radius:20px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(12px);
+transition:0.4s;
 }
-.card:hover {
-    transform:translateY(-10px) scale(1.05);
-    box-shadow:0 0 20px #00ff88;
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 20px #00ff88;
 }
 
 /* BUTTON */
-.btn {
-    padding:12px 25px;
-    border-radius:25px;
-    background:#00ff88;
-    border:none;
-    cursor:pointer;
+.btn{
+padding:12px 25px;
+border-radius:25px;
+background:#00ff88;
+border:none;
+cursor:pointer;
 }
 
 /* AI BOX */
-.ai-box {
-    margin-top:20px;
-    padding:30px;
-    border-radius:20px;
-    background:rgba(255,255,255,0.1);
-    backdrop-filter:blur(10px);
+.ai-box{
+margin-top:20px;
+padding:30px;
+border-radius:20px;
+background:rgba(255,255,255,0.1);
+backdrop-filter:blur(10px);
 }
 
 /* LOGOS */
-.logos img {
-    width:120px;
-    margin:20px;
-    filter:brightness(0) invert(1);
-    transition:0.3s;
+.logos img{
+width:120px;
+margin:20px;
+filter:brightness(0) invert(1);
+transition:0.3s;
 }
-.logos img:hover {
-    transform:scale(1.2);
+.logos img:hover{
+transform:scale(1.2);
+}
+
+/* GALLERY */
+img{
+border-radius:15px;
+margin:10px;
+transition:0.3s;
+}
+img:hover{
+transform:scale(1.05);
 }
 
 /* ANIMATION */
-.fade {
-    opacity:0;
-    transform:translateY(50px);
-    transition:0.8s;
+.fade{
+opacity:0;
+transform:translateY(50px);
+transition:0.8s;
 }
-.show {
-    opacity:1;
-    transform:translateY(0);
+.show{
+opacity:1;
+transform:translateY(0);
 }
 </style>
 </head>
@@ -96,91 +112,111 @@ nav h2 {color:#00ff88}
 <body>
 
 <nav>
-    <h2>🌿 Green Environment</h2>
+<h2>🌿 Green Environment</h2>
 </nav>
 
 <section class="hero">
-    <h1>25+ Years of Green Excellence 🌱</h1>
-    <p>Delhi NCR Landscaping Experts | Ravi Vatsa</p>
+<h1>25+ Years of Green Excellence 🌱</h1>
+<p>Delhi NCR Landscaping Experts | Ravi Vatsa</p>
 </section>
 
 <!-- SERVICES -->
 <section class="section fade">
-    <h2>🌿 Our Services</h2>
-    <div class="card">Landscaping</div>
-    <div class="card">Commercial Design</div>
-    <div class="card">FRP Pots</div>
-    <div class="card">Nursery Supply</div>
-    <div class="card">Plantation Drives</div>
+<h2>🌿 Our Services</h2>
+<div class="card">Landscaping</div>
+<div class="card">Commercial Design</div>
+<div class="card">FRP Pots</div>
+<div class="card">Nursery Supply</div>
+<div class="card">Plantation Drives</div>
 </section>
 
 <!-- AI PREDICTOR -->
 <section class="section fade">
-    <h2>🧠 Smart Plant Predictor</h2>
+<h2>🧠 Smart Plant Predictor</h2>
 
-    <div class="ai-box">
-        <select id="city">
-            <option>Delhi</option>
-            <option>Mumbai</option>
-            <option>Bangalore</option>
-        </select>
+<div class="ai-box">
+<select id="sun">
+<option>Low</option>
+<option>Medium</option>
+<option>High</option>
+</select>
 
-        <select id="sun">
-            <option>Low</option>
-            <option>Medium</option>
-            <option>High</option>
-        </select>
+<br><br>
+<button class="btn" onclick="predict()">Suggest Plants 🌱</button>
 
-        <br><br>
-        <button class="btn" onclick="predict()">Suggest Plants 🌱</button>
-
-        <h3 id="result" style="margin-top:20px;"></h3>
-    </div>
+<h3 id="result"></h3>
+</div>
 </section>
 
 <!-- CLIENT LOGOS -->
 <section class="section fade">
-    <h2>🏢 Trusted By</h2>
+<h2>🏢 Trusted By</h2>
 
-    <div class="logos">
-        <img src="https://logo.clearbit.com/wipro.com">
-        <img src="https://logo.clearbit.com/airtel.com">
-        <img src="https://logo.clearbit.com/samsung.com">
-        <img src="https://logo.clearbit.com/apollotyres.com">
-        <img src="https://logo.clearbit.com/cbre.com">
-    </div>
+<div class="logos">
+<img src="https://logo.clearbit.com/wipro.com">
+<img src="https://logo.clearbit.com/airtel.com">
+<img src="https://logo.clearbit.com/samsung.com">
+<img src="https://logo.clearbit.com/apollotyres.com">
+<img src="https://logo.clearbit.com/cbre.com">
+</div>
+</section>
+
+<!-- PROJECT GALLERY -->
+<section class="section fade">
+<h2>🌿 Our Projects</h2>
+
+<img src="https://images.unsplash.com/photo-1597262975002-c5c3b14bbd62" width="300">
+<img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" width="300">
+<img src="https://images.unsplash.com/photo-1492496913980-501348b61469" width="300">
 </section>
 
 <!-- CONTACT -->
 <section class="section fade">
-    <h2>📍 Contact</h2>
-    <p>Head Office: SB-129, Sector 63 A, Noida</p>
-    <p>Email: green_environment@rediffmail.com</p>
+<h2>📍 Contact</h2>
+<p>Head Office: SB-129, Sector 63 A, Noida - 201301</p>
+<p>Email: green_environment@rediffmail.com</p>
+
+<br>
+
+<iframe 
+src="https://www.google.com/maps?q=sector+63+noida&output=embed"
+width="80%" height="300" style="border-radius:20px;">
+</iframe>
 </section>
+
+<!-- WHATSAPP BUTTON -->
+<a href="https://wa.me/919999999999" target="_blank" style="
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+">
+💬
+</a>
 
 <script>
 function predict(){
-    let sun=document.getElementById("sun").value;
-    let res=document.getElementById("result");
+let sun=document.getElementById("sun").value;
+let res=document.getElementById("result");
 
-    if(sun==="Low"){
-        res.innerHTML="🌿 Snake Plant, ZZ Plant, Money Plant";
-    }
-    else if(sun==="Medium"){
-        res.innerHTML="🌱 Tulsi, Aloe Vera, Peace Lily";
-    }
-    else{
-        res.innerHTML="🌸 Rose, Hibiscus, Bougainvillea";
-    }
+if(sun==="Low") res.innerHTML="🌿 Snake Plant, ZZ Plant, Money Plant";
+else if(sun==="Medium") res.innerHTML="🌱 Tulsi, Aloe Vera, Peace Lily";
+else res.innerHTML="🌸 Rose, Hibiscus, Bougainvillea";
 }
 
 /* SCROLL ANIMATION */
 const observer=new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-    });
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+});
 });
 
 document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
